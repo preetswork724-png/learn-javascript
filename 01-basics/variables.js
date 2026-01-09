@@ -23,12 +23,12 @@ console.log(n);
 let k = "Rohan";
 console.log(k);
 
-// 3. let k = "Ritik"; // Redeclaration not allowed
+// let k = "Ritik"; // Redeclaration not allowed
 k = 56; //  Reassignment allowed
 console.log(k);
 
 // --------------------
-// const keyword
+// 3. const keyword
 // --------------------
 const pi = 3.14;
 console.log(pi);
