@@ -15,12 +15,15 @@ Goal: Understand function declaration, function expression, parameters, default 
 //        return value; // Optional
 // }
 
+// A function that had its own name when declared is called as a named function. For example, add(param1, param2).
+
 function add(a, b){
     let sum = a + b;
     return sum;
 }
 
 console.log(add(6,9)); // 15
+
 
 // --------------------
 // 2. Function Expression
@@ -31,6 +34,9 @@ console.log(add(6,9)); // 15
 //         function body;
 //         return value; // optional
 // }
+
+// A function that does not have a name is called as anonymous function. It is usually assigned to a variable or used as a callback. Since, it has
+// no name, it cannot be called directly.
 
 // When you assign a function (can be named or anonymous) to a variable. The function can then be used by calling the variable.
 // Since function expression is just a variable, using var / let / const doesn't matter.
@@ -123,7 +129,7 @@ const isEven = function(num){
     return num % 2 == 0;
 }
 
-console.log(isEven(7));
+console.log(isEven(7)); // false
 
 // Q4: Create a function expression named isPositive that returns true if a number is greater than 0, otherwise false.
 // Example: isPositive(5) -> true, isPositive(-2) -> false
@@ -132,7 +138,7 @@ const isPositive = function(num){
     return num > 0;
 }
 
-console.log(isPositive(3));
+console.log(isPositive(3)); // true
 
 // 3. Parameters
 
@@ -143,7 +149,7 @@ function findMax(num1, num2, num3){
    return (num1 > num2) ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3);
 }
 
-console.log(findMax(3, 9, 1));
+console.log(findMax(3, 9, 1)); // 9
 
 // Q6: Write a function findMin that takes three numbers and returns the smallest one.
 // Example: findMin(3, 9, 1) -> 1
@@ -152,7 +158,7 @@ function findMin(num1, num2, num3){
     return (num1 < num2) ? (num1 < num3 ? num1 : num3) : (num2 < num3 ? num2 :num3);
 }
 
-console.log(findMin(3,9,1));
+console.log(findMin(3,9,1)); // 1
 
 // 4. Default Parameters
 
@@ -164,7 +170,7 @@ function power(base, exponent = 2){
     return base ** exponent;
 }
 
-console.log(power(2, 3));
+console.log(power(2, 3)); // 8
 
 // Q8: Write a function greetUser that takes name and city.
 // If city is not provided, it should default to "Pune".
@@ -174,7 +180,7 @@ function greetUser(name, city = "Pune"){
     return "Hello " + name  + " from " + city;
 }
 
-console.log(greetUser("Harsh"));
+console.log(greetUser("Harsh")); // Hello Harsh from Pune
 
 // 5. Return Statement
 // Q9: Write a function fullName that takes firstName and lastName
@@ -186,7 +192,7 @@ function fullName(firstName, lastName){
 }
 
 // console.log(fullName); Prints the entire function
-console.log(fullName("Deependra", "Goyal"));
+console.log(fullName("Deependra", "Goyal")); // Deependra Goyal
 
 // Q10: Write a function average that takes two numbers and returns their average.
 // Example: average(4, 6) -> 5
@@ -195,7 +201,7 @@ function average(num1, num2){
     return (num1 + num2) / 2;
 }
 
-console.log(average(10,50));
+console.log(average(10,50)); // 30
 
 // 6. Mixed Practice
 // Q11: Write a function calculator that takes three parameters: a, b, and operation.
@@ -210,10 +216,10 @@ function calculator(num1, num2, operation){
     else return "Invalid operation";
 }
 
-console.log(calculator(10, 5, "add"));
-console.log(calculator(10, 5, "sub"));
-console.log(calculator(10, 5, "mul"));
-console.log(calculator(10, 5, "div"));
+console.log(calculator(10, 5, "add")); // 15
+console.log(calculator(10, 5, "sub")); // 5
+console.log(calculator(10, 5, "mul")); // 50
+console.log(calculator(10, 5, "div")); // 2
 
 // Q12: Write a function compare that takes two numbers and returns
 // "greater", "smaller", or "equal" based on their comparison.
@@ -224,4 +230,4 @@ function compare(num1, num2){
     else num1 + " and " + num2 + " are equal";
 }
 
-console.log(compare(4,5));
+console.log(compare(4,5)); // 4 is lesser than 5
