@@ -1,7 +1,7 @@
 /*
 ===================================
 Topic: Data Types in JavaScript
-Goal: Understand var, let, const and scope behavior.
+Goal: Understand javascript data types and type coercion behavior.
 ===================================
 */
 
