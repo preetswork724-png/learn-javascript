@@ -41,6 +41,7 @@ fun();
 }
 
 //console.log(z); // Reference Error
+//console.log(y); // Reference Error
 
 {
     var b = 15;
@@ -71,7 +72,7 @@ let l = 10;
     console.log(l);
 }
 
-console.log(l);
+console.log(l); // 10
 
 // --------------------
 // Scope Chain
@@ -84,7 +85,7 @@ function outer(){
 
     function inner(){
         let c = 3;
-        console.log(a, b, c);
+        console.log(a, b, c); // 1 2 3
     }
 
     inner();
@@ -101,7 +102,7 @@ for (var i = 0; i < 3; i++) {
 }
 
 // 3 3 3
-// Explanation : var iss function-scoped. So there is only one i shared by all the iterations.
+// Explanation : var is function-scoped. So there is only one i shared by all the iterations.
 // What does setTimeout do?
 // Schedules the callback.
 // Does not execute immediately.
@@ -152,7 +153,7 @@ test();
 
 {
     const x = 10;
-    //x = 20; // Type Error : Assignment to constant variable. 
+    // x = 20; // Type Error : Assignment to constant variable. 
 }
 
 
