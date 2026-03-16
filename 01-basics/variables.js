@@ -12,10 +12,10 @@ var n = 5;
 console.log(n);
 
 var n = 20; // Redeclaration allowed
-console.log(n);
+console.log(n); // 20
 
 var n = 30 + n;
-console.log(n);
+console.log(n); // 50
 
 // --------------------
 // 2. let keyword
@@ -25,13 +25,13 @@ console.log(k);
 
 // let k = "Ritik"; // Redeclaration not allowed
 k = 56; //  Reassignment allowed
-console.log(k);
+console.log(k); // 56
 
 // --------------------
 // 3. const keyword
 // --------------------
 const pi = 3.14;
-console.log(pi);
+console.log(pi); // 3.14
 
 // pi = 22 / 7; // TypeError: Assignment to constant variable
 
