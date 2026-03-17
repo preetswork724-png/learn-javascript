@@ -13,7 +13,7 @@ Goal: Understand arrow function, this behavior and lexical scope.
 // which makes them useful in some cases. 
 
 // Syntax :
-// const functionName = (paramters) => {
+// const functionName = (parameters) => {
 //    function body;
 //    return value; // optional 
 // };
@@ -187,11 +187,27 @@ const obj = {
     value: 200,
     show: function(){
         const arrow = () => {
-            console.log(this.value);
+            console.log(this.value); 
         };
-        arrow();
+        arrow(); 
     }
 };
 
 obj.show();
 */
+
+let value = 100;
+
+const obj = {
+    value: 200,
+    show: function(){
+        const arrow = () => {
+            console.log(this.value); // Inside show(), we create an arrow function, so it takes `this` from their surrounding scope.
+            // Surrounding scope is show, where this = obj. 
+            // Therefore inside arrow, this.value === obj.value === 200.
+        };
+        arrow(); // calls the arrow function and prints 200.
+    }
+};
+
+obj.show();
